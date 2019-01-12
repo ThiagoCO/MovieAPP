@@ -7,6 +7,8 @@ target 'Movies' do
 
   # Pods for Movies
 
+  pod 'Alamofire', '~> 4.7'
+
   target 'MoviesTests' do
     inherit! :search_paths
     # Pods for testing
