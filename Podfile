@@ -8,6 +8,7 @@ target 'Movies' do
   # Pods for Movies
 
   pod 'Alamofire', '~> 4.7'
+  pod 'SDWebImage'
 
   target 'MoviesTests' do
     inherit! :search_paths
