@@ -19,7 +19,7 @@ extension HomeMoviesViewController: UICollectionViewDelegate, UICollectionViewDa
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MoviesCell
         if let listGames = viewModel?.listMovies {
             let urlImg = "https://image.tmdb.org/t/p/w500/\(listGames.results[indexPath.row].posterImg)"
-            var movieFavorite = viewModel?.getFavoriteMovie(idSelected: listGames.results[indexPath.row].id)
+            let movieFavorite = viewModel?.getFavoriteMovie(idSelected: listGames.results[indexPath.row].id)
             cell.configMovieCell(name: listGames.results[indexPath.row].title, img: urlImg, favorite: movieFavorite ?? false)
             cell.buttonFavorite.tag = listGames.results[indexPath.row].id
             

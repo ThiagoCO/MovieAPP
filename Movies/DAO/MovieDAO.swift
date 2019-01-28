@@ -89,4 +89,17 @@ class MovieDAO: NSObject {
         }
     }
     
+    func getMoviesFavoriteList() -> [MovieFavoriteDb]{
+        
+        let listMovie:NSFetchRequest<MovieFavoriteDb> = MovieFavoriteDb.fetchRequest()
+        
+        do{
+            let result = try context.fetch(listMovie)
+            return result
+            
+        }catch {
+            print("fail")
+        }
+        return []
+    }
 }

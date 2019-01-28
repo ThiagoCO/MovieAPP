@@ -20,6 +20,8 @@ class HomeMoviesViewController: UIViewController {
     
     @IBOutlet weak var searchMovies: UISearchBar!
     
+    @IBOutlet weak var searchMessageView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupCollecitionView()

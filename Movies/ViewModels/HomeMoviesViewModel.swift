@@ -54,9 +54,16 @@ class HomeMoviesViewModel {
         if(searchText.isEmpty) {
             guard let completeListMovie = searchMoviesList else { return }
             listMovies?.results = completeListMovie
+            view.hideMessageSearch()
         }
         else {
             listMovies?.results = searchMoviesList?.filter { $0.title.uppercased().contains(searchText.uppercased()) } ?? []
+            if(listMovies?.results.count == 0) {
+                view.showMessageSearch()
+            }
+            else {
+                view.hideMessageSearch()
+            }
         }
         
         view.reloadCollection()

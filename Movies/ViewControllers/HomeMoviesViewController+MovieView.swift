@@ -12,6 +12,8 @@ protocol MovieView {
     func stopLoad()
     func startLoad()
     func reloadCollection()
+    func showMessageSearch()
+    func hideMessageSearch()
 }
 
 extension HomeMoviesViewController: MovieView {
@@ -30,5 +32,13 @@ extension HomeMoviesViewController: MovieView {
     
     func reloadCollection() {
         collectionView.reloadData()
+    }
+    
+    func showMessageSearch(){
+        searchMessageView.isHidden = false
+    }
+    
+    func hideMessageSearch() {
+        searchMessageView.isHidden = true
     }
 }

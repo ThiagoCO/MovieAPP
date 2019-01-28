@@ -28,7 +28,7 @@ class MoviesCell: UICollectionViewCell {
         layer.borderWidth = 1
         layer.borderColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1).cgColor
        // layer.cornerRadius = 8
-        var image = favorite ?  UIImage(named: "favorite_full_icon")?.withRenderingMode(.alwaysOriginal) :  UIImage(named: "favorite_gray_icon")?.withRenderingMode(.alwaysOriginal)
+        let image = favorite ?  UIImage(named: "favorite_full_icon")?.withRenderingMode(.alwaysOriginal) :  UIImage(named: "favorite_gray_icon")?.withRenderingMode(.alwaysOriginal)
         
         buttonFavorite.setImage(image, for: .normal)
         
