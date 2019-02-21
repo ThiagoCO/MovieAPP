@@ -34,5 +34,16 @@ struct Movie: Codable {
     var listGenre: [Int]
     var description: String
     var date: String
+    
+    init(movieDb:MovieFavoriteDb)  {
+        self.voteCount = Int(movieDb.voteCount)
+        self.id = Int(movieDb.id)
+        self.voteAverage = movieDb.voteAverage as! Double
+        self.title = movieDb.title ?? ""
+        self.posterImg = movieDb.posterImg ?? ""
+        self.listGenre = movieDb.listGenre as? [Int] ?? []
+        self.description = movieDb.descriptionMovie ?? ""
+        self.date = movieDb.dateMovie ?? ""
+    }
 }
 

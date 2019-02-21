@@ -11,7 +11,7 @@ import UIKit
 class HomeMoviesViewController: UIViewController {
     
     //MARK: - Variables
-    var viewModel:HomeMoviesViewModel?
+    var viewModel: HomeMoviesViewModel?
     var activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
 
     
@@ -27,7 +27,9 @@ class HomeMoviesViewController: UIViewController {
         self.setupCollecitionView()
         self.viewModel = HomeMoviesViewModel(view: self)
         self.searchMovies.delegate = self
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    
     
     func setupCollecitionView() {
         collectionView.delegate = self
